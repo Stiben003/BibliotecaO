@@ -1,0 +1,399 @@
+:root {
+    --bleu: #18085c;
+    --white: #ffffff;
+    --gris: #efefef;
+}
+
+body {
+    font-family: "Muli", sans-serif;
+    font-weight: 300;
+    color: var(--primary);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.bg-bleu {
+    background-color: var(--bleu) !important;
+}
+
+.bg-white {
+    background-color: var(--white) !important;
+}
+
+.bg-gris {
+    background-color: var(--gris) !important;
+}
+
+.bg-mix {
+    background: linear-gradient(180deg, var(--white) 50%, var(--gris) 0);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border: 0;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    div.logo-title {
+        display: none;
+    }
+    .stat {
+        border: 0;
+    }
+}
+@media (min-width: 768px) {
+    div.sidebar-hidden {
+        display: none;
+    }
+    .stat {
+        border: 0;
+    }
+}
+@media (max-width: 768px) {
+    img.imagene {
+        width: 50px;
+        height: 50px;
+    }
+    #sidebar-container {
+        margin-left: -250px;
+    }
+
+    #sidebar-container.active {
+        margin-left: 0;
+    }
+}
+@media (min-width: 768px) {
+    img.imagen {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/*Controles de formularios material desing ================*/
+.group-material {
+    position: relative;
+    margin-bottom: 45px;
+}
+/*Contenedores de formularios ================*/
+.container-flat-form {
+    width: 75%;
+    margin: 25px auto;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: relative;
+    padding-bottom: 25px;
+}
+.title-flat-form {
+    background-color: #e34724;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    line-height: 50px;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 50px;
+}
+.title-flat-green {
+    background-color: #16a085;
+}
+.title-flat-blue {
+    background-color: #0098fd;
+}
+/*Controles de formularios material desing ================*/
+.group-material {
+    position: relative;
+    margin-bottom: 45px;
+}
+input.material-control,
+select.material-control {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #0098fd;
+}
+select.material-control,
+select.no-style {
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: #fff url(../assets/icons/SelectMaterialIndicator.png) no-repeat
+        scroll right 0.75rem center / 9px 13px;
+}
+select.material-control:hover,
+select.no-style {
+    cursor: pointer;
+}
+/*Estado activo*/
+input.material-control:focus,
+select.material-control {
+    outline: none;
+    border-bottom: 1px solid #5264ae;
+}
+/*Label de formularios material desing ================*/
+.group-material label {
+    color: #0098fd;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+}
+/* Estado activo */
+input.material-control:focus ~ label,
+input.material-control:valid ~ label {
+    top: -20px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+    font-weight: normal;
+}
+input.material-control:valid ~ label:before {
+    content: "✓   ";
+}
+input.material-control:focus:invalid ~ label,
+input.material-control:invalid ~ label {
+    top: -20px;
+    font-size: 17px;
+    color: #0098fd;
+    font-weight: normal;
+}
+input.material-control:focus:invalid ~ label:after {
+    content: "Formato no válido o campo vacío";
+    margin: 0 5px;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #18085c;
+    border-radius: 4px;
+    font-weight: normal;
+}
+input.material-control:focus:invalid:required,
+input.material-control:invalid:required {
+    outline: none;
+    box-shadow: none;
+}
+/*Barra de formularios material desing ================*/
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.bar:before,
+.bar:after {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264ae;
+    transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+}
+.bar:before {
+    left: 50%;
+}
+.bar:after {
+    right: 50%;
+}
+input.material-control:focus ~ .bar:before,
+input.material-control:focus ~ .bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: linear-gradient(to right, #18085c, #0098fd);
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #7386d5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 15px;
+    background: #18085c;
+}
+#sidebar .sidebar-header img {
+    width: 50px;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #7386d5;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul #homeSubmenu a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+ul #pageSubmenu a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+button i {
+    color: white;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+#content {
+    width: calc(100% - 250px);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    margin-top: 50px;
+}
+#nav-content {
+    width: calc(100% - 250px);
+    padding-bottom: 10px;
+    min-height: 15vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+#nav-content.active {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #nav-content {
+        width: 100%;
+    }
+    #nav-content.active {
+        width: calc(100% - 250px);
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
